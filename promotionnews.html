@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <title>HAPPY HOME</title>
+    <style>
+        #carouselExampleCaptions {
+            width: 80%;
+            /* Adjust the width as needed */
+            margin: auto;
+            /* Center the carousel */
+        }
+
+        /* Adjust the height of the images */
+        .carousel-item img {
+            height: 500px;
+            /* Adjust the height as needed */
+            object-fit: cover;
+            /* Maintain aspect ratio */
+        }
+        .img-hover-effect {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .img-hover-effect:hover {
+            transform: scale(1.05); /* Slightly increase the size */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a shadow */
+        }
+        
+    .hover-underline {
+        transition: text-decoration 0.3s ease;
+    }
+
+    .hover-underline:hover {
+        text-decoration: underline;
+    }
+    body {
+        font-family: 'Helvetica', sans-serif;
+        background-color: rgb(228, 239, 224); /* Light grey background for a clean look */
+        color: #0c2212; /* Dark grey text for readability */
+    }
+    .custom-heading {
+        color: rgb(3, 72, 3);
+        font-family: 'Lucida Handwriting', cursive;
+    }
+    h2{color: rgb(3, 72, 3);
+    font-family: "Times New Roman", Times, serif;}
+    .p-5 {
+            background-color: #17a2b8; /* Teal background for the header */
+            background-image: url('background_banner.jpg'); /* Add the background image */
+            background-size: cover; /* Cover the entire div */
+            background-position: center; /* Center the image */
+            color: #ffffff; /* White text for the header */
+        }
+
+    nav {
+        background-color: rgb(8, 132, 8); /* Green background for the navbar */
+    }
+    footer{
+        background-color: rgb(8, 132, 8); /* Green background for the navbar */
+    }
+    nav .navbar-brand,
+    nav .nav-link {
+        color: #ffffff !important; /* White text for the navbar */
+    }
+    .btn-green {
+    background-color: rgb(4, 105, 4); /* Change button background color to green */
+    border-color: green; /* Change button border color to green */
+}
+.custom-carousel
+{font-family: "Brush Script MT", cursive;
+font-size: 40px; }
+
+
+
+    </style>
+</head>
+
+<body onload="lastUpdate()">
+    <nav class="px-5 navbar navbar-expand-sm  navbar-dark justify-content-center">
+        <div class="container-fluid">
+            <a class="navbar-brand custom-heading" href="task5.3-project.html"> <img src="happy_house.jpeg" alt="Avatar Logo"
+                    style="width:40px;">
+                HAPPY HOME SHOP</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="navItem">
+                <div class="seach">
+                    <input type="text" placeholder="Search…." class="searchInput">
+                    <button type="submit"><i class="fa fa-search"></i></button>
+                </div>
+
+            </div>
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="task5.3-project.html">HOME</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="aboutus.html">ABOUT US</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="bedroom.html">BEDROOM</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="bathroom.html">BATHROOM</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="home-decor.html">HOME DECORATION</a>
+                    </li>
+                    
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="news.html" role="button"
+                            data-bs-toggle="dropdown">NEWS</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="productnews.html">PRODUCT NEWS</a>
+                            </li>
+                            <li><a class="dropdown-item" href="promotionnews.html">PROMOTION NEWS</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"> 
+                        <a class="nav-link" href="contact_homeshop.html">CONTACT US</a> 
+                    </li>  
+                    <li class="nav-item">
+                        <a class="nav-link" href="signin.html">SIGN IN</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Header Section-->
+    <div class="p-5 mb-2 text-white">
+        <div class="container">
+            <h1 class="display-4 custom-heading"> Welcome to Happy Home Shop</h1>
+            <p class="lead text-black"> Hurry up for best discounted products.</p>
+        </div>
+    </div>
+    <!--Image Carousel-->
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="20000">
+                <img src="promo_1.jpg" class="d-block w-100 img-hover-effect" alt="Image carousel_1">
+                <div class="carousel-caption d-none d-md-block">
+
+                    <p class="custom-carousel">25% discounted for Lancaster Reversible Quilt Cover</p>
+
+                </div>
+            </div>
+            <div class="carousel-item" data-bs-interval="20000">
+                <img src="promo_2.jpeg" class="d-block w-100 img-hover-effect " alt="Image carousel_2">
+                <div class="carousel-caption d-none d-md-block">
+
+                    <p class="custom-carousel"> 25% discounted for the whole dining table and chairs</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="promo_3.jpeg" class="d-block w-100 img-hover-effect" alt="Image carousel_3">
+                <div class="carousel-caption d-none d-md-block">
+
+                    <p class="custom-carousel">Bathroom accessories at 30% discount</p>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    <!--Main Content-->
+    <div class="container">
+        <h2 class="mb-2 mt-4"> <b>NEW ARRIVALS - NEW SALE</b> </h2>
+        <p> Discover unbeatable deals on a wide range of products during our exclusive sale! Now is the perfect time to shop. Don't miss out on these incredible savings</p>
+
+        <section id="promo" >
+
+            
+                <div class="row g-1">
+                    <div class="col-sm-3 col-12 mb-4">
+                  
+                        <img src="bathtowel.jpeg" class="img-fluid img-hover-effect" alt="col_1" height="100" width="700">
+                        <p class="hover-underline"><str>Bath Towel 3-piece pack </str> <br>
+                        
+                                <s> $25 </s> <br>
+                                 $19.99</p>
+
+                        
+                    </div>
+                
+                    <div class="col-sm-3 col-12 mb-4">
+                    
+                        <img src="discount_2.jpg" class="img-fluid img-hover-effect" alt="col_2" height="100" width="700">
+                        <p class="hover-underline"><str>Bath Accessories </str> <br>
+                           
+                               <s> $30 </s> <br>
+                                $19.99</p>
+
+                        
+                    </div>
+                    <div class="col-sm-3 col-12 mb-4">
+                        <img src="discount_3.jpeg" class="img-fluid img-hover-effect" alt="col_3" height="100" width="700">
+                        
+                            <p class="hover-underline"><str>Scent candle</str> <br>
+                            <s>$15</s><br>
+                            $7</p>
+                    </div>
+                    <div class="col-sm-3 col-12 mb-4">
+                   
+                            <img src="cotton_sheet.jpg" class="img-fluid img-hover-effect" alt="col_4" height="100" width="700">
+                            
+                                <p class="hover-underline"> <str> Cotton sheet set </str> <br>
+                                    <s>$40</s><br>
+                                    $25</p>
+                            
+                            </div>
+                            <div class="col-sm-3 col-12 mb-4">
+                  
+                                <img src="lamp_sale.jpg" class="img-fluid img-hover-effect" alt="col_1" height="100" width="700">
+                                <p class="hover-underline"><str>Table lamp </str> <br>
+                                
+                                        <s> $35 </s> <br>
+                                         $29.99</p>
+        
+                                
+                            </div>
+                        
+                            <div class="col-sm-3 col-12 mb-4">
+                            
+                                <img src="chair_sale.jpeg" class="img-fluid img-hover-effect" alt="col_2" height="100" width="700">
+                                <p class="hover-underline"><str>Chair </str> <br>
+                                   
+                                       <s> $120 </s> <br>
+                                        $80.99</p>
+        
+                                
+                            </div>
+                            <div class="col-sm-3 col-12 mb-4">
+                                <img src="blanket_sale.jpg" class="img-fluid img-hover-effect" alt="col_3" height="80" width="700">
+                                
+                                    <p class="hover-underline"><str>Blanket</str> <br>
+                                    <s>$60</s><br>
+                                    $45.99</p>
+                            </div>
+                            <div class="col-sm-3 col-12 mb-4">
+                           
+                                    <img src="pillows_sale.jpg" class="img-fluid img-hover-effect" alt="col_4" height="100" width="700">
+                                    
+                                        <p class="hover-underline"> <str> Pillows </str> <br>
+                                            <s>$20</s><br>
+                                            $12.99</p>
+                                    
+                                    </div>
+                            </div>
+         <h2 class=" mb-4 mt-4"> <b>UPCOMING HOT SALE</b> </h2>
+         <div class="card mb-3" style="max-width: 800px;">
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img src="upcoming_sale.jpg" class="img-fluid rounded-start" alt="sale_1">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title">Table Lamp</h5>
+                  <p class="card-text">Illuminate your space with style and savings during our hot sale on this table lamp, featuring modern designs and timeless classics. The sale starts on 01/06/2024 with 30% discount.Click the link to keep it up.
+                    <a href="home-decor.html" title="table lamp">Buy this product</a>
+                  </p>
+
+                  
+                </div>
+              </div>
+            
+                <div class="col-md-4">
+                  <img src="chair_upcoming_sale.jpg" class="img-fluid rounded-start" alt="sale_1">
+                </div>
+                <div class="col-md-8">
+                  <div class="card-body">
+                    <h5 class="card-title">Modern wood chair</h5>
+                    <p class="card-text">Embrace contemporary elegance and comfort with our modern wood chair collection, now available at unbeatable prices. Crafted with precision and attention to detail, each chair combines sleek design with the warmth of natural wood, creating a timeless addition to any space. The sale starts on 05/06/2024 with 10% discount.Click the link to keep it up.
+                      <a href="home-decor.html" title="chair">Buy this product</a>
+                    </p>
+  
+                    
+                  </div>
+                </div>
+                <div class="col-md-4">
+                    <img src="bed_upcoming_sales.jpg" class="img-fluid rounded-start" alt="sale_2">
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body">
+                      <h5 class="card-title">Reversible Duvet Cover</h5>
+                      <p class="card-text">Experience versatility and style with our reversible duvet cover collection, coming soon to elevate your bedroom decor. Designed for the modern home, these duvet covers offer a double dose of design possibilities, with two complementary patterns or colors on each side, will be on sale from 10/06/2024.Click the link to keep it up.
+                        <a href="home-decor.html" title="duvet">Buy this product</a>
+                      </p>
+    
+
+              </div>
+          </div>
+                    
+
+        </section>
+    </div>
+    </body>
+<!-- Footer -->
+<footer class="text-white p-3">
+    <div class="text-center p-4">
+        <div style="line-height: 18px;font-size: 10.5px;">
+            <p>Happy Home ® Copyright 2023. All rights reserved.</p>
+            <p>Contact: abc@happyhome.com</p>
+            <p id="lastUpdate"></p>
+
+            
+        </div>
+    </div>
+</footer>
+ <!-- Scripts -->
+ <script 
+ src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js">
+  </script>
+     <script>
+         // Add lastUpdate()
+         function lastUpdate() {
+             const today = new Date();
+             const dateString = today.toLocaleDateString('en-US'); // mm/dd/yyyy
+             document.getElementById("lastUpdate").innerHTML = "Last update: " + 
+ dateString;
+         };
+     </script>
+  
+</html>
+
+
+
+
+
+
+

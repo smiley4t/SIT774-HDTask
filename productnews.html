@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <title>HAPPY HOME</title>
+    <style>
+        #carouselExampleCaptions {
+            width: 80%;
+            /* Adjust the width as needed */
+            margin: auto;
+            /* Center the carousel */
+        }
+
+        /* Adjust the height of the images */
+        .carousel-item img {
+            height: 500px;
+            /* Adjust the height as needed */
+            object-fit: cover;
+            /* Maintain aspect ratio */
+        }
+        .img-hover-effect {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .img-hover-effect:hover {
+            transform: scale(1.05); /* Slightly increase the size */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a shadow */
+        }
+        
+    .hover-underline {
+        transition: text-decoration 0.3s ease;
+    }
+
+    .hover-underline:hover {
+        text-decoration: underline;
+    }
+    .custom-heading {
+        color: rgb(3, 72, 3);
+        font-family: 'Lucida Handwriting', cursive;
+    }
+    .custom-text {
+        font-family: 'Lucida Handwriting', cursive;
+    }
+    h2{color: rgb(3, 72, 3);
+    font-family: "Times New Roman", Times, serif;}
+    .p-5 {
+            background-color: #17a2b8; /* Teal background for the header */
+            background-image: url('background_banner.jpg'); /* Add the background image */
+            background-size: cover; /* Cover the entire div */
+            background-position: center; /* Center the image */
+            color: #ffffff; /* White text for the header */
+        }
+
+    nav {
+        background-color: rgb(8, 132, 8); /* Green background for the navbar */
+    }
+    footer{
+        background-color: rgb(8, 132, 8); /* Green background for the navbar */
+    }
+    nav .navbar-brand,
+    nav .nav-link {
+        color: #ffffff !important; /* White text for the navbar */
+    }
+    .btn-green {
+    background-color: rgb(4, 105, 4); /* Change button background color to green */
+    border-color: green; /* Change button border color to green */
+}
+body {
+        font-family: 'Helvetica', sans-serif;
+        background-color: rgb(228, 239, 224); /* Light grey background for a clean look */
+        color: #0c2212; /* Dark grey text for readability */
+    }
+.custom-carousel
+{font-family: "Brush Script MT", cursive;
+font-size: 40px; }
+
+
+    </style>
+</head>
+
+<body onload="lastUpdate()">
+    <nav class="px-5 navbar navbar-expand-sm navbar-dark justify-content-center">
+        <div class="container-fluid">
+            <a class="navbar-brand  custom-heading" href="task5.3-project.html"> <img src="happy_house.jpeg" alt="Avatar Logo"
+                    style="width:40px;">
+                HAPPY HOME SHOP</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="navItem">
+                <div class="seach">
+                    <input type="text" placeholder="Search…." class="searchInput">
+                    <button type="submit"><i class="fa fa-search"></i></button>
+                </div>
+
+            </div>
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="task5.3-project.html">HOME</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="aboutus.html">ABOUT US</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="bedroom.html">BEDROOM</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="bathroom.html">BATHROOM</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="home-decor.html">HOME DECORATION</a>
+                    </li>
+                    
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="news.html" role="button"
+                            data-bs-toggle="dropdown">NEWS</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="productnews.html">PRODUCT NEWS</a>
+                            </li>
+                            <li><a class="dropdown-item" href="promotionnews.html">PROMOTION NEWS</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"> 
+                        <a class="nav-link" href="contact_homeshop.html">CONTACT US</a> 
+                    </li>  
+                    <li class="nav-item">
+                        <a class="nav-link" href="signin.html">SIGN IN</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Header Section-->
+    <div class="p-5 mb-2 text-white">
+        <div class="container">
+            <h1 class="display-4 custom-heading"> Welcome to Happy Home Shop</h1>
+            <p class="lead text-black"> Let's get updated with news about latest products .</p>
+        </div>
+    </div>
+    <!--Image Carousel-->
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="20000">
+                <img src="newcollection_1.jpg" class="d-block w-100" alt="Image carousel_1">
+                <div class="carousel-caption d-none d-md-block">
+
+                    <p class="custom-carousel">New Collection for the Season 2024</p>
+
+                </div>
+            </div>
+            <div class="carousel-item" data-bs-interval="20000">
+                <img src="newcollection_2.jpg" class="d-block w-100" alt="Image carousel_2">
+                <div class="carousel-caption d-none d-md-block">
+
+                    <p>The best choice for your Autumn and Winter</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="newcollection_3.jpeg" class="d-block w-100" alt="Image carousel_3">
+                <div class="carousel-caption d-none d-md-block">
+
+                    <p>With unique design that fits your aesthetics</p>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    <!--Main Content-->
+    <div class="container">
+        <h2 class=" mb-2 mt-4"> <b>AUTUMN COLLECTION 2024</b> </h2>
+        <p> Embracing the warm hues and inviting textures of the season, our curated selection promises to infuse your
+            space with the timeless charm and comfort synonymous with autumnal bliss. From plush bedding adorned with
+            rustic patterns to accents that evoke the earthy tones of falling leaves, each piece has been thoughtfully
+            chosen to transform your bedroom into a sanctuary of seasonal serenity. Dive into our Autumn Collection and
+            let the spirit of fall envelop your home in a tapestry of comfort and style</p>
+
+        <section id="autumn collection" >
+
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+                <div class="col">
+                    <div class="card">
+                        <img src="autumn col_1.jpg" class="card-img-top" alt="col_1">
+                        <div class="card-body">
+                            <h5 class="card-title">Design 1</h5>
+                            <p class="card-text"> A vibrant design adorned with two main colors white and yellow will
+                                turn your room into a haven of energy and tranquility. Elevate your sleeping space with our autumn bed linen, where cozy elegance meets timeless style, creating the perfect sanctuary for the crisp, cool nights ahead.</p>
+                        </div>
+                        <div class="row g-1">
+                            <button type="button" class="btn btn-primary btn-green mt-3">Choose this design</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <img src="autumn col_2.png" class="card-img-top" alt="col_2">
+                        <div class="card-body">
+                            <h5 class="card-title">Design 2</h5>
+                            <p class="card-text">If you like orange and white, lets try this design to transfrom your
+                                room into a warm and cosy retreat. </p>
+                        </div>
+                        <div class="row g-1">
+                            <button type="button" class="btn btn-primary btn-green mt-3">Choose this design</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <img src="autumn col_3.jpg" class="card-img-top" alt="col_3">
+                        <div class="card-body">
+                            <h5 class="card-title">Design 3</h5>
+                            <p class="card-text">Nothing more Autumn than leaves adorned in your duvet. Imagine to sleep
+                                peacefully on this bed</p>
+                            </div>
+                            <div class="row g-1">
+                                <button type="button" class="btn btn-primary btn-green mt-3">Choose this design</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card">
+                            <img src="autumn col_4.jpg" class="card-img-top" alt="col_4">
+                            <div class="card-body">
+                                <h5 class="card-title">Design 4</h5>
+                                <p class="card-text">Another vibrant design of orange and white. Your room will not look
+                                    sweet and vibrant further with this</p>
+                            </div>
+                            <div class="row g-1">
+                                <button type="button" class="btn btn-primary btn-green mt-3">Choose this design</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card">
+                            <img src="autumn col_5.jpg" class="card-img-top" alt="col_4">
+                            <div class="card-body">
+                                <h5 class="card-title">Design 5</h5>
+                                <p class="card-text">Embrace the cozy charm of autumn with our new bed linen collection with warm tones, intricate patterns, and luxurious fabrics.</p>
+                            </div>
+                            <div class="row g-1">
+                                <button type="button" class="btn btn-primary btn-green mt-3">Choose this design</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card">
+                            <img src="autumn col_6.jpg" class="card-img-top" alt="col_4">
+                            <div class="card-body">
+                                <h5 class="card-title">Design 6</h5>
+                                <p class="card-text">Each piece of this design is crafted with the highest quality materials to ensure comfort and durability, making your space a perfect retreat for the cooler months.</p>
+                            </div>
+                            <div class="row g-1">
+                                <button type="button" class="btn btn-primary btn-green mt-3">Choose this design</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+        </section>
+        <section id="bathroom accessories" >
+            <h2 class="  mb-2 mt-4"> <b>NEW ARRIVALS - BATHROOM ACCESORIES</b> </h2>
+            <p> Refresh your bathroom with our latest collection of accessories. Our new arrivals blend functionality with contemporary design, offering stylish solutions to enhance your space. From sleek soap dispensers and elegant toothbrush holders to innovative storage options, each piece is crafted with meticulous attention to detail and high-quality materials. Discover the perfect accents to elevate your bathroom decor and create a serene, organized oasis with our newest additions.</p>
+            <div class="row g-1">
+                <div class="col-sm-3 col-12 mb-4">
+                    <img src="bathroom_acc_1.jpg" class="img-fluid img-hover-effect" alt="Image 1" height="50" width="700">
+                    <p class="hover-underline">White ceramic bath accessories</p>
+                    <p class="hover-underline"><s> $40 </s> </p>
+                    <p class="hover-underline"> $29.99</p>
+                </div>
+                <div class="col-sm-3 col-12 mb-4">
+                    <img src="bathroom_acc_2.jpg" class="img-fluid img-hover-effect" alt="Image 2" height="30" width="700">
+                    <p class="hover-underline" >Gold bathroom accessories</p>
+                    <p class="hover-underline"><s> $60 </s> </p>
+                    <p class="hover-underline"> $39.99</p>
+
+                </div>
+                <div class="col-sm-3 col-12 mb-4">
+                    <img src="bathroom_acc_3.jpg" class="img-fluid img-hover-effect" alt="Image 2" height="30" width="700">
+                    <p class="hover-underline" >Botanic bathroom accessories</p>
+                    <p class="hover-underline"><s> $40 </s> </p>
+                    <p class="hover-underline"> $29.99</p>
+
+                </div>
+                <div class="col-sm-3 col-12 mb-4">
+                    <img src="bathroom_acc_4.jpg" class="img-fluid img-hover-effect" alt="Image 3" height="50" width="700">
+                    <p class="hover-underline" >Brown glass bathroom accessories</p>
+                    <p class="hover-underline"><s> $30 </s> </p>
+                    <p class="hover-underline"> $19.99</p>
+
+                    
+                </div>
+
+
+        </section>
+        <section id="bed linen" >
+            <h2 class=" mb-2 mt-4"> <b>NEW ARRIVALS - BED LINENS</b> </h2>
+            <div class="clearfix">
+                <img src="bed_linen.jpg" class="col-md-6 float-md-end mb-3 ms-md-3 img-hover-effect" alt="bed_linen" height="400" width="700">
+              
+                <p>
+                
+              Experience the ultimate in comfort and style with our brand-new bed linen collection. Thoughtfully designed to bring elegance and warmth to your bedroom, each piece in this collection features exquisite patterns and luxurious fabrics that cater to every aesthetic. From soft, breathable cottons to plush, cozy textures, our new arrivals are perfect for refreshing your space and ensuring a restful night's sleep. Embrace the blend of sophistication and comfort with our latest bed linen, and transform your bedroom into a serene sanctuary. Click the link below to start shopping
+            </p>
+            <a href="bedroom.html" title="Go to shopping">Go to shopping</a>
+
+                
+              </div>
+
+        </section>
+    </div>
+    </body>
+    <!-- Footer -->
+    <footer class="text-white p-3">
+        <div class="text-center p-4">
+            <div style="line-height: 18px;font-size: 10.5px;">
+                <p>Happy Home ® Copyright 2023. All rights reserved.</p>
+                <p>Contact: abcc@happyhome.com</p>
+                <p id="lastUpdate"></p>
+
+                
+            </div>
+        </div>
+    </footer>
+    <script 
+     src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js">
+      </script>
+         <script>
+             // Add lastUpdate()
+             function lastUpdate() {
+                 const today = new Date();
+                 const dateString = today.toLocaleDateString('en-US'); // mm/dd/yyyy
+                 document.getElementById("lastUpdate").innerHTML = "Last update: " + 
+     dateString;
+             };
+         </script>
+      
+    </html>
+
+
+    
+    

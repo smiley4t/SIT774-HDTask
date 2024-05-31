@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js
+ ">
+</script>
+    <title>HAPPY HOME</title>
+    <style>
+        #carouselExampleCaptions {
+            width: 80%;
+            /* Adjust the width as needed */
+            margin: auto;
+            /* Center the carousel */
+        }
+
+        /* Adjust the height of the images */
+        .carousel-item img {
+            height: 500px;
+            /* Adjust the height as needed */
+            object-fit: cover;
+            /* Maintain aspect ratio */
+        }
+
+        .error {
+            color: red;
+        }
+
+        .valid {
+            color: green;
+        }
+
+        body {
+            font-family: 'Helvetica', sans-serif;
+            background-color: rgb(228, 239, 224);
+            /* Light grey background for a 
+clean look */
+            color: #0c2212;
+            /* Dark grey text for readability */
+        }
+
+        .custom-heading {
+            color: rgb(3, 72, 3);
+            font-family: 'Lucida Handwriting', cursive;
+        }
+
+        h2 {
+            color: rgb(3, 72, 3);
+            font-family: "Times New Roman", Times, serif;
+        }
+
+        .p-5 {
+            background-color: #17a2b8;
+            /* Teal background for the header */
+            background-image: url('background_banner.jpg');
+            /* Add the background 
+image */
+            background-size: cover;
+            /* Cover the entire div */
+            background-position: center;
+            /* Center the image */
+            color: #ffffff;
+            /* White text for the header */
+        }
+
+        nav {
+            background-color: rgb(8, 132, 8);
+            /* Green background for the navbar */
+        }
+
+        footer {
+            background-color: rgb(8, 132, 8);
+            /* Green background for the navbar */
+        }
+
+        nav .navbar-brand,
+        nav .nav-link {
+            color: #ffffff !important;
+            /* White text for the navbar */
+        }
+
+        .btn-green {
+            background-color: rgb(4, 105, 4);
+            /* Change button background color to green 
+*/
+            border-color: green;
+            /* Change button border color to green */
+        }
+
+        .custom-carousel {
+            font-family: "Brush Script MT", cursive;
+            font-size: 40px;
+        }
+    </style>
+</head>
+
+<body onload="lastUpdate()">
+    <nav class="px-5 navbar navbar-expand-sm  navbar-dark justify-content
+center">
+        <div class="container-fluid">
+            <a class="navbar-brand custom-heading" href="task5.3-project.html">
+                <img src="happy_house.jpeg" alt="Avatar Logo" style="width:40px;">
+                HAPPY HOME SHOP</a>
+            <button class="navbar-toggler" type="button" data-bs toggle="collapse" data-bs-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="navItem">
+                <div class="seach">
+                    <input type="text" placeholder="Search…." class="searchInput">
+                    <button type="submit"><i class="fa fa-search"></i></button>
+                </div>
+
+            </div>
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="task5.3-project.html">HOME</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="aboutus.html">ABOUT US</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="bedroom.html">BEDROOM</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="bathroom.html">BATHROOM</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="home-decor.html">HOME
+                            DECORATION</a>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="news.html" role="button"
+                            data-bs-toggle="dropdown">NEWS</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="productnews.html">PRODUCT NEWS</a>
+                            </li>
+                            <li><a class="dropdown-item" href="promotionnews.html">PROMOTION NEWS</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact_homeshop.html">CONTACT
+                            US</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="signin.html">SIGN IN</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Header Section-->
+    <div class="p-5 mb-2  text-white">
+        <div class="container">
+            <h1 class="display-4 custom-heading"> Welcome to Happy Home Shop</h1>
+            <p class="lead text-black">Lets get contacted and give feedbacks for
+                us .</p>
+        </div>
+    </div>
+
+    <!--Main Content-->
+    <div class="container">
+        <h2 class="  mb-2 mt-4"> <b>CONTACT INFORMATION</b> </h2>
+        <p>Email: <i>abc@happyhome.com</i></p><br>
+        <p>Postal address: <i>79 Station Street, Bennettswood Victoria
+                3125</i></p><br>
+        <p>Phone number: <i>0478963587</i></p><br>
+
+        <h2 class=" mb-2 mt-4"> <b>CONTACT FORM</b> </h2>
+        <form class="row g-4" action ="/contact" method ="post">
+            <div class="col-md-6 col-12">
+                <label for="inputFirstname" class="form-label">Firstname</label>
+                <input type="text" class="form-control" id="inputFirstname" name="inputFirstname">
+                <span id="firstnameError" class="error"></span>
+                <span id="firstnameValid" class="valid"></span><br><br>
+            </div>
+
+
+            <div class="col-md-6 col-12 ">
+                <label for="inputSirname" class="form-label">Sirname</label>
+                <input type="text" class="form-control " id="inputSirname" name="inputSirname">
+                <span id="sirnameError" class="error"></span>
+                <span id="sirnameValid" class="valid"></span><br><br>
+            </div>
+
+            <div class="col-md-6 col-12">
+                <label for="inputEmail4" class="form-label">Email</label>
+                <input type="email" class="form-control" id="inputEmail4" name="inputEmail">
+                <span id="emailError" class="error"></span>
+                <span id="emailValid" class="valid"></span><br><br>
+            </div>
+
+            <div class="col-md-6 col-12">
+                <label for="inputMobile" class="form-label">Mobile</label>
+                <input type="text" class="form-control" id="inputMobile" name="inputMobile" placeholder="+61 
+xxxx xxx xxx">
+                <span id="phoneNumberError" class="error"></span>
+                <span id="phoneNumberValid" class="valid"></span><br><br>
+            </div>
+            <div class="row mt-2 mb-1">
+                <div class="col-12">
+                    <label for="message"> Leave us a message </label>
+                    <textarea name="message" id="message" rows="5" class="form-control"></textarea>
+                    <span id="textError" class="error"></span>
+                    <span id="textValid" class="valid"></span><br><br>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-12 ">
+                    <button class="btn btn-primary mt-2 mb-4 btn-green " type="submit"
+                        onclick="validateContact()">Submit</button>
+                </div>
+                
+                    
+                
+
+            </div>
+        </form>
+        
+    </div>
+    
+</body>
+<!-- Footer -->
+<footer class="text-white p-3">
+    <div class="text-center p-4">
+        <div style="line-height: 18px;font-size: 10.5px;">
+            <p>Happy Home ® Copyright 2023. All rights reserved.</p>
+            <p>Contact: abcc@happyhome.com</p>
+            <p id="lastUpdate"></p>
+
+        </div>
+    </div>
+</footer>
+<script src="validation_contact.js"></script>
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.m
+ in.js">
+</script>
+<script>
+    // Add lastUpdate() 
+    function lastUpdate() {
+        const today = new Date();
+        const dateString = today.toLocaleDateString('en-US'); // 
+       
+        document.getElementById("lastUpdate").innerHTML = "Last update: " +  dateString; 
+    }; 
+</script>
+
+
+</html>
